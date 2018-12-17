@@ -1,6 +1,6 @@
 {
   "name": "allow-publish-tag",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Prevent package from publishing using allowed tags list",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   "bin": "./bin.js",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/rumkin/allow-publish-tags.git"
+    "url": "git+ssh://git@github.com/rumkin/allow-publish-tag.git"
   },
   "keywords": [
     "utils",
@@ -22,7 +22,7 @@
   "author": "Rumkin <dev@rumk.in> (https://rumk.in/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rumkin/allow-publish-tags/issues"
+    "url": "https://github.com/rumkin/allow-publish-tag/issues"
   },
-  "homepage": "https://github.com/rumkin/allow-publish-tags#readme"
+  "homepage": "https://github.com/rumkin/allow-publish-tag#readme"
 }
