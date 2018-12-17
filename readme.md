@@ -1,4 +1,4 @@
-# Allow Publish Tags
+# Allow Publish Tag
 
 Allow publish tag is preventing your NPM package from being accidentally
 published with latest tag. Use it with `prepublishOnly` hook in your package
