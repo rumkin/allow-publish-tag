@@ -7,12 +7,12 @@ file.
 How it works?
 
 1. Add `prepublishOnly` hook in `package.json`.
-2. Specify allowed tag list as cli arguments: `allow-publish-tags next dev`.
+2. Specify allowed tag list as cli arguments: `allow-publish-tag next dev`.
 
 ## Installation
 
 ```
-npm i allow-publish-tags
+npm i allow-publish-tag
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ npm i allow-publish-tags
 // package.json
 {
   "scripts": {
-    "prepublishOnly": "allow-publish-tags next"
+    "prepublishOnly": "allow-publish-tag next"
   }
 }
 ```
