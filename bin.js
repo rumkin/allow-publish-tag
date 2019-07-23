@@ -5,10 +5,11 @@ const isAllowedTags = require('./index.js');
 const allowedTags = process.argv.slice(2);
 
 if (allowedTags.length) {
-  const tag = process.env.npm_config_tag;
+  const currentTag = process.env.npm_config_tag;
+  const version = process.env.npm_package_version;
 
-  if (! isAllowedTags(allowedTags, tag)) {
-    console.error('Allowed publish tags are: %s', allowedTags.join(', '));
+  if (! isAllowedTags(version, allowedTags, currentTag)) {
+    console.error('Package version %s requires one of provided publish tag: %s', version, allowedTags.join(', '));
     process.exit(1);
   }
 }

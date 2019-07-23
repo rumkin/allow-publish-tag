@@ -1,4 +1,10 @@
-function isAllowedTag(_tags, _tag) {
+const flagRe = /-[A-z0-9]+$/;
+
+function isAllowedTag(version, _tags, _tag) {
+  if (! version.match(flagRe)) {
+    return true;
+  }
+
   const tag = _tag.toLowerCase();
   const tags = _tags.map(function(allowed) {
     return allowed.toLowerCase();
