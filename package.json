@@ -32,6 +32,11 @@
     "url": "https://github.com/rumkin/allow-publish-tag/issues"
   },
   "homepage": "https://github.com/rumkin/allow-publish-tag#readme",
+  "files": [
+    "bin/",
+    "src/",
+    "readme.md"
+  ],
   "dependencies": {
     "lodash.isplainobject": "^4.0.6",
     "semver": "^7.3.2"
