@@ -31,7 +31,7 @@ Example:
 {
   "version" : "1.0.0-alpha.1",
   "scripts": {
-    "prepublishOnly": "allow-publish-tag next"
+    "prepublishOnly": "allow-publish-tag"
   },
   "allowPublishTags": {
     "next": ["beta", "alpha", "rc"]

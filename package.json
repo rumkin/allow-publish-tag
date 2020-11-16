@@ -1,6 +1,6 @@
 {
   "name": "allow-publish-tag",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Prevent package from publishing with allowed tags list",
   "main": "src/index.js",
   "bin": "./bin/cli.js",
