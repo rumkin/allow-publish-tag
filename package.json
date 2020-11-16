@@ -1,29 +1,44 @@
 {
   "name": "allow-publish-tag",
-  "version": "2.0.0",
-  "description": "Prevent package from publishing using allowed tags list",
-  "main": "index.js",
+  "version": "3.0.0",
+  "description": "Prevent package from publishing with allowed tags list",
+  "main": "src/index.js",
+  "bin": "./bin/cli.js",
   "scripts": {
-    "prepublishOnly" : "npm test",
-    "test": "node index.spec.js"
+    "prepublishOnly": "npm test && npm run lint",
+    "lint": "eslint src bin test",
+    "test": "node test/index.spec.js"
   },
-  "bin": "./bin.js",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/rumkin/allow-publish-tag.git"
   },
   "keywords": [
-    "utils",
+    "util",
     "bin",
     "cli",
     "npm",
     "development",
-    "tools"
+    "dx",
+    "integrity",
+    "check",
+    "tool",
+    "dist-tag",
+    "release"
   ],
   "author": "Rumkin <dev@rumk.in> (https://rumk.in/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/rumkin/allow-publish-tag/issues"
   },
-  "homepage": "https://github.com/rumkin/allow-publish-tag#readme"
+  "homepage": "https://github.com/rumkin/allow-publish-tag#readme",
+  "dependencies": {
+    "lodash.isplainobject": "^4.0.6",
+    "semver": "^7.3.2"
+  },
+  "devDependencies": {
+    "@codegoods/eslint-config-base": "^2.3.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.13.0"
+  }
 }

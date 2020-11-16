@@ -21,16 +21,20 @@ npm i allow-publish-tag
 
 ## Usage
 
-1. Add `prepublishOnly` hook in `package.json`.
-2. Specify allowed tag list as cli arguments: `allow-publish-tag [..TAGS]`.
+1. Add `prepublishOnly` script in `package.json`.
+2. Specify allowed tag list as cli arguments: `allow-publish-tag [..TAGS]` or into `package.json` directive `allowPublishTags`.
 3. Run `npm publish --tag next` when you're ready to publish your package.
 
-```javascript
+Example:
+```js
 // package.json
 {
-  "version" : "1.0.0-a1",
+  "version" : "1.0.0-alpha.1",
   "scripts": {
     "prepublishOnly": "allow-publish-tag next"
+  },
+  "allowPublishTags": {
+    "next": ["beta", "alpha", "rc"]
   }
 }
 ```
