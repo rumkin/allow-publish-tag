@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const path = require('path')
-const {checkTags, checkPkgTags} = require('..')
+const {check, checkDirective} = require('..')
 
 main()
 .then((code) => process.exit(code))
@@ -10,8 +10,8 @@ function main() {
   const pkg = require(path.join(process.cwd(), 'package.json'))
 
   return whilst(pkg, [
-    execArgvTagsCheck,
-    execPkgTagsCheck,
+    execArgvCheck,
+    execDirectiveCheck,
   ])
   .then((result) => {
     if (!result) {
@@ -34,7 +34,7 @@ function main() {
   })
 }
 
-function execArgvTagsCheck(pkg) {
+function execArgvCheck(pkg) {
   const cliTags = process.argv.slice(2)
   const distTag = process.env.npm_config_tag
 
@@ -42,19 +42,15 @@ function execArgvTagsCheck(pkg) {
     return
   }
 
-  checkTags(pkg, cliTags, distTag)
+  check(pkg, cliTags, distTag)
 
   return {exitCode: 0}
 }
 
-function execPkgTagsCheck(pkg) {
+function execDirectiveCheck(pkg) {
   const distTag = process.env.npm_config_tag
 
-  if (!pkg.allowPublishTag) {
-    return
-  }
-
-  checkPkgTags(pkg, distTag)
+  checkDirective(pkg, distTag)
 
   return {exitCode: 0}
 }
