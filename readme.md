@@ -65,7 +65,7 @@ no `allowPublishTag` field, then the default configuration will be used.
 AllowPublishTagFlag | AllowPublishTagList | AllowPublishTagDict
 ```
 
-Configuration value `AllowPublishTagRecord` describes the value of `allowPublishVersion` field of `package.json`.
+Configuration value `AllowPublishTagRecord` describes the value of `allowPublishTag` field of `package.json`.
 
 ### `AllowPublishTagFlag`
 
@@ -79,7 +79,7 @@ Example:
 
 ```js
 {
-  "allowPublishVersion": true
+  "allowPublishTag": true
 }
 ```
 
@@ -95,7 +95,7 @@ Example:
 
 ```js
 {
-  "allowPublishVersion": ["alpha", "beta", "pre.*"]
+  "allowPublishTag": ["alpha", "beta", "pre.*"]
 }
 ```
 
@@ -115,7 +115,7 @@ Example:
 
 ```js
 {
-  "allowPublishVersion": {
+  "allowPublishTag": {
     "next": "{alpha,beta,rc}?(.+([0-9]))"
   }
 }
